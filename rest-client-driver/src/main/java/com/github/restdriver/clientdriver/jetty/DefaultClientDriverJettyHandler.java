@@ -251,5 +251,11 @@ public final class DefaultClientDriverJettyHandler extends AbstractHandler imple
         expectations.add(expectation);
         return expectation;
     }
-    
+
+    @Override
+    public void reset() {
+        expectations.clear();
+        matchedResponses.clear();
+        unexpectedRequests.clear();
+    }
 }

@@ -161,6 +161,14 @@ public final class ClientDriver {
     public ClientDriverExpectation addExpectation(ClientDriverRequest request, ClientDriverResponse response) {
         return handler.addExpectation(request, response);
     }
+
+    public void reset() {
+        handler.reset();
+    }
+
+    public int getPort() {
+        return jettyServer.getConnectors()[0].getLocalPort();
+    }
     
     void addListener(ClientDriverListener listener) {
         listeners.add(listener);

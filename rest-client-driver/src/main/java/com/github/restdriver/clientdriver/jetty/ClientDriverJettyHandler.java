@@ -36,7 +36,8 @@ public interface ClientDriverJettyHandler extends Handler {
      * @return The added expectation
      */
     ClientDriverExpectation addExpectation(ClientDriverRequest request, ClientDriverResponse response);
-    
+
+    void reset();
     /**
      * This method will throw a ClientDriverFailedExpectationException if there have been any unexpected requests.
      */
